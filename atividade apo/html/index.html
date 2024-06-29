@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Currículo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Currículo</h1>
+        <form id="curriculoForm" action="../php/gerar_curriculo.php" method="post">
+            <!-- Campos de entrada de dados pessoais -->
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade</label>
+                <input type="text" class="form-control" id="idade" name="idade" readonly>
+            </div>
+            <!-- Campos dinâmicos para experiências profissionais e referências pessoais serão adicionados aqui -->
+            <div id="experienciasProfissionais">
+                <h3>Experiências Profissionais</h3>
+                <button type="button" class="btn btn-primary" id="addExperiencia">Adicionar Experiência</button>
+            </div>
+            <div id="referenciasPessoais">
+                <h3>Referências Pessoais</h3>
+                <button type="button" class="btn btn-primary" id="addReferencia">Adicionar Referência</button>
+            </div>
+            <button type="submit" class="btn btn-success">Gerar Currículo</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
